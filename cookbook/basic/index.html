@@ -1,10 +1,8 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="HandheldFriendly" content="true"><meta name="description" content="An easy PHP Library for calculating national holidays"><title>Yasumi - An easy PHP Library for calculating national holidays</title><link rel="stylesheet" href="https://azuyalabs.github.io/yasumi/css/main.css"><link rel="canonical" href="https://azuyalabs.github.io/yasumi"><meta property="og:url" content="https://azuyalabs.github.io/yasumi"><meta property="og:type" content="website"><meta property="og:title" content="Yasumi - An easy PHP Library for calculating national holidays"><meta property="og:image" content="https://azuyalabs.github.io/yasumi/images/yasumi_logo.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="297"><meta property="og:image:height" content="88"><meta property="og:description" content="An easy PHP Library for calculating national holidays"><link rel="apple-touch-icon" sizes="180x180" href="https://azuyalabs.github.io/yasumi/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" href="https://azuyalabs.github.io/yasumi/favicons/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="https://azuyalabs.github.io/yasumi/favicons/favicon-16x16.png" sizes="16x16"><link rel="manifest" href="https://azuyalabs.github.io/yasumi/favicons/manifest.json"><link rel="mask-icon" href="https://azuyalabs.github.io/yasumi/favicons/safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="https://azuyalabs.github.io/yasumi/favicons/favicon.ico"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-TileImage" content="https://azuyalabs.github.io/yasumi/favicons/mstile-144x144.png"><meta name="msapplication-config" content="https://azuyalabs.github.io/yasumi/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"></head><body><a href="https://github.com/azuyalabs/yasumi"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a><section class="hero is-primary"><div class="hero-head"><div class="container"><nav class="nav"><div class="nav-left"><a class="nav-item is-brand" href="https://azuyalabs.github.io/yasumi"><img src="https://azuyalabs.github.io/yasumi/images/yasumi_logo.png" alt="https://azuyalabs.github.io/yasumi" width="297" height="88"></a></div><div id="nav-menu" class="nav-right nav-menu"><a class="nav-item" href="https://azuyalabs.github.io/yasumi/gettingstarted/">Getting Started </a><a class="nav-item" href="https://azuyalabs.github.io/yasumi/features/">Features </a><a class="nav-item is-active" href="https://azuyalabs.github.io/yasumi/cookbook/">Cookbook </a><a class="nav-item" href="https://azuyalabs.github.io/yasumi/blog/">Blog </a><a class="nav-item" href="https://azuyalabs.github.io/yasumi/contributing/">Contributing </a><span class="nav-item"><a class="button is-danger" href="https://github.com/azuyalabs/yasumi/archive/1.7.0.zip"><span class="icon"><i class="fa fa-download"></i> </span><span>Download</span></a></span></div></nav></div></div><div class="hero-body"><div class="container"><div class="columns is-vcentered"><div class="column"><h1 class="title is-2">A basic starter</h1></div></div></div></div><div class="hero-foot is-hidden"><div class="container"><nav class="tabs is-boxed"><ul><li class="is-active"><a href="#">Menu 1</a></li><li><a href="#">Menu 2</a></li><li><a href="#">Menu 3</a></li><li><a href="#">Menu 4</a></li><li><a href="#">Menu 5</a></li></ul></nav></div></div></section><section class="section"><div class="container content"><div class="columns"><div class="column"><p>Yasumi is very easy to use. Let's see how easy with this basic exercise.</p><p>We need to include Yasumi using the Composer autoloader first, then we can create a new holiday provider instance (we will be using the United States of America):</p><pre><code class="language-php">&lt;?php
-
-// Require the composer auto loader
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="HandheldFriendly" content="true"><meta name="description" content="An easy PHP Library for calculating national holidays"><title>Yasumi - An easy PHP Library for calculating national holidays</title><link rel="stylesheet" href="https://azuyalabs.github.io/yasumi/css/main.css"><link rel="canonical" href="https://azuyalabs.github.io/yasumi"><meta property="og:url" content="https://azuyalabs.github.io/yasumi"><meta property="og:type" content="website"><meta property="og:title" content="Yasumi - An easy PHP Library for calculating national holidays"><meta property="og:image" content="https://azuyalabs.github.io/yasumi/images/yasumi_logo.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="297"><meta property="og:image:height" content="88"><meta property="og:description" content="An easy PHP Library for calculating national holidays"><link rel="apple-touch-icon" sizes="180x180" href="https://azuyalabs.github.io/yasumi/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" href="https://azuyalabs.github.io/yasumi/favicons/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="https://azuyalabs.github.io/yasumi/favicons/favicon-16x16.png" sizes="16x16"><link rel="manifest" href="https://azuyalabs.github.io/yasumi/favicons/manifest.json"><link rel="mask-icon" href="https://azuyalabs.github.io/yasumi/favicons/safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="https://azuyalabs.github.io/yasumi/favicons/favicon.ico"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-TileImage" content="https://azuyalabs.github.io/yasumi/favicons/mstile-144x144.png"><meta name="msapplication-config" content="https://azuyalabs.github.io/yasumi/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"></head><body><section class="hero is-primary"><div class="hero-head"><div class="container"><nav class="navbar is-spaced" role="navigation" aria-label="main navigation"><div class="navbar-brand"><a class="nav-item" href="https://azuyalabs.github.io/yasumi"><img src="https://azuyalabs.github.io/yasumi/images/yasumi_logo.png" alt="https://azuyalabs.github.io/yasumi" width="297" height="88"> </a><label class="navbar-burger burger" aria-label="menu" for="nav-toggle-state" style="z-index:999"><span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span></label></div><input type="checkbox" id="nav-toggle-state"><div id="nav-menu" class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="https://azuyalabs.github.io/yasumi/gettingstarted/">Getting Started </a><a class="navbar-item" href="https://azuyalabs.github.io/yasumi/features/">Features </a><a class="navbar-item is-active" href="https://azuyalabs.github.io/yasumi/cookbook/">Cookbook </a><a class="navbar-item" href="https://azuyalabs.github.io/yasumi/blog/">Blog </a><a class="navbar-item" href="https://azuyalabs.github.io/yasumi/contributing/">Contributing</a></div><div class="navbar-end"><div class="nav-item"><a class="button is-danger" href="https://github.com/azuyalabs/yasumi/releases/latest"><span class="icon"><i class="fa fa-download"></i> </span><span>Download</span></a></div></div></div></nav></div></div><div class="hero-body"><div class="container"><div class="columns is-vcentered"><div class="column"><h1 class="title is-2">A basic starter</h1></div></div></div></div></section><section class="section"><div class="container content"><div class="columns"><div class="column"><p>Yasumi is very easy to use. Let's see how easy with this basic exercise.</p><p>We need to include Yasumi using the Composer autoloader first, then we can create a new holiday provider instance (we will be using the United States of America):</p><pre><code class="language-php">// Require the composer auto loader
 require 'vendor/autoload.php';
 
 // Use the factory to create a new holiday provider instance
-$holidays = Yasumi\Yasumi::create('USA', 2017);</code></pre><p>Now we can access and use the various API methods of Yasumi. Let's see how many holidays the US has in 2017:</p><pre><code class="language-php">// Get the number of defined holidays
+$holidays = Yasumi\Yasumi::create('USA', 2019);</code></pre><p>Now we can access and use the various API methods of Yasumi. Let's see how many holidays the US has in 2019:</p><pre><code class="language-php">// Get the number of defined holidays
 echo $holidays-&gt;count() . PHP_EOL;
 
 // 10 (Substituted holidays are only accounted for once)</code></pre><p>To get an overview of all the holidays of the US, we can simply loop through the results since each Yasumi Holiday Provider implements the <a href="http://php.net/manual/en/class.arrayiterator.php">ArrayIterator</a>. Getting a list of holidays for the US with the internal short names is performed as follows:</p><pre><code class="language-php">// Get a list all of the holiday names (short names)
@@ -13,11 +11,9 @@ foreach ($holidays-&gt;getHolidayNames() as $name) {
 }
 
 // 'newYearsDay'
-// 'substituteHoliday:newYearsDay'
 // 'martinLutherKingDay'
 // 'washingtonsBirthday'
 // 'memorialDay'
-// 'substituteHoliday:independenceDay'
 // 'independenceDay'
 // 'labourDay'
 // 'columbusDay'
@@ -28,17 +24,16 @@ foreach ($holidays-&gt;getHolidayDates() as $date) {
     echo $date . PHP_EOL;
 }
 
-// 2017-01-01
-// 2017-01-02
-// 2017-01-16
-// 2017-02-20
-// 2017-05-29
-// 2017-07-04
-// 2017-09-04
-// 2017-10-09
-// 2017-11-11
-// 2017-11-23
-// 2017-12-25</code></pre><p>Independence Day is an important holiday in the US. What details can Yasumi tell us about this holiday? Using the 'getHoliday' function we can retrieve information like the localized name, date and type of holiday of Independence Day:</p><pre><code class="language-php">// Get a holiday object for Independence Day
+// 2019-01-01
+// 2019-01-21
+// 2019-02-18
+// 2019-05-27
+// 2019-07-04
+// 2019-09-02
+// 2019-10-14
+// 2019-11-11
+// 2019-11-28
+// 2019-12-25</code></pre><p>Independence Day is an important holiday in the US. What details can Yasumi tell us about this holiday? Using the 'getHoliday' function we can retrieve information like the localized name, date and type of holiday of Independence Day:</p><pre><code class="language-php">// Get a holiday object for Independence Day
 $independenceDay = $holidays-&gt;getHoliday('independenceDay');
 
 // Get the localized name
@@ -49,7 +44,7 @@ echo $independenceDay-&gt;getName() . PHP_EOL;
 // Get the date
 echo $independenceDay . PHP_EOL;
 
-// '2017-07-04'
+// '2019-07-04'
 
 // Get the type of holiday
 echo $independenceDay-&gt;getType() . PHP_EOL;
@@ -62,7 +57,7 @@ echo json_encode($independenceDay, JSON_PRETTY_PRINT);
 //    "translations": {
 //        "en_US": "Independence Day"
 //    },
-//    "date": "2017-07-04 00:00:00.000000",
+//    "date": "2019-07-04 00:00:00.000000",
 //    "timezone_type": 3,
 //    "timezone": "America\/New_York"
-// }</code></pre></div><div class="column is-3"><aside class="menu"><p class="menu-label">Recipes</p><ul class="menu-list"><li><a href="https://azuyalabs.github.io/yasumi/cookbook/between_filter/">Get holidays based on a given date range</a></li><li><a href="https://azuyalabs.github.io/yasumi/cookbook/basic/">A basic starter</a></li><li><a href="https://azuyalabs.github.io/yasumi/cookbook/custom_provider/">Use a custom provider for uncommon providers</a></li><li><a href="https://azuyalabs.github.io/yasumi/cookbook/filters/">Using filters to only retrieve certain type of holidays</a></li></ul></aside></div></div></div></section><footer class="footer"><div class="container"><div class="content has-text-centered"><p>&copy; 2015 - 2019 <strong>Yasumi</strong> is maintained by <a href="https://github.com/azuyalabs">AzuyaLabs</a>. The source code is licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p></div></div></footer></body></html>
+// }</code></pre></div><div class="column is-3"><aside class="menu"><p class="menu-label">Recipes</p><ul class="menu-list"><li><a href="https://azuyalabs.github.io/yasumi/cookbook/basic/">A basic starter</a></li><li><a href="https://azuyalabs.github.io/yasumi/cookbook/between_filter/">Get holidays based on a given date range</a></li><li><a href="https://azuyalabs.github.io/yasumi/cookbook/custom_provider/">Use a custom provider for atypical providers</a></li><li><a href="https://azuyalabs.github.io/yasumi/cookbook/filters/">Using filters to only retrieve certain type of holidays</a></li></ul></aside></div></div></div></section><footer class="footer"><div class="container"><div class="content has-text-centered"><p>&copy; 2015 - 2019 <strong>Yasumi</strong> is maintained by <a href="https://github.com/azuyalabs">AzuyaLabs</a>. The source code is licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p></div></div></footer></body></html>
