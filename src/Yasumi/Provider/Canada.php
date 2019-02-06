@@ -133,7 +133,7 @@ class Canada extends AbstractProvider
             [
                 'en_US' => 'Thanksgiving Day',
             ],
-            new DateTime("second monday of october", new DateTimeZone($this->timezone)),
+            new DateTime("second monday of october $this->year", new DateTimeZone($this->timezone)),
             $this->locale
         ));
     }
