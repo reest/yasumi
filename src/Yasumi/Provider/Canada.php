@@ -56,6 +56,9 @@ class Canada extends AbstractProvider
         $this->calculateThanksgivingDay();
         $this->calculateBoxingDay();
 
+        $this->addHoliday($this->goodFriday($this->year, $this->timezone, $this->locale));
+        $this->addHoliday($this->easterMonday($this->year, $this->timezone, $this->locale));
+
         $this->calculateSubstituteHolidays();
     }
 
@@ -118,7 +121,7 @@ class Canada extends AbstractProvider
             [
                 'en_US' => 'Remembrance Day',
             ],
-            new DateTime("$this->year-10-11", new DateTimeZone($this->timezone)),
+            new DateTime("$this->year-11-11", new DateTimeZone($this->timezone)),
             $this->locale
         ));
 	}
